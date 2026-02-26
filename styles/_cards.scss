@@ -1,4 +1,13 @@
+#app {
+  display: flex;
+  flex-wrap: wrap;      // pour que les cartes passent à la ligne si elles dépassent la largeur
+  gap: 20px;            // espace entre les cartes
+  justify-content: center; // centrer les cartes
+}
+
 .recipe-card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid $primary-color;
   border-radius: $border-radius;
   padding: $padding-card;
@@ -6,6 +15,26 @@
   background-color: $background-color;
   color: $text-color;
   font-family: $font-main;
-  text-align: center;
+  text-align: left;
   box-shadow: $card-shadow;
+  font-size: 14px;
+
+  ;
+  &-img{
+    width: 250px;
+    height: 100px;
+    border-radius: 10px;
+  }
+&-name{
+font-family: $font-title;
+font-weight: 400;
+font-size: 15px;
+margin-bottom: 8px;
+}
+&-cookTimeMinutes{
+    display: flex;
+    text-align: left;
+
+}
+
 }

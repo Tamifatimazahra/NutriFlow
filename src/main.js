@@ -13,9 +13,9 @@
         carte.classList.add("recipe-card");
 
          carte.innerHTML = `
-         <img src="${recipe.image}" alt="${recipe.title}" class="recipe-image">
-        <h2>${recipe.name}</h2>
-        <p>Duree: ${recipe.cookTimeMinutes} min</p>
+         <img class="recipe-card-img" src="${recipe.image}" alt="${recipe.title}" class="recipe-image">
+        <h2 class=".recipe-card-name">${recipe.name}</h2>
+        <p class=".recipe-card-cookTimeMinutes"> ⏱ ${recipe.cookTimeMinutes} min</p>
     `;
         app.appendChild(carte);
     };
@@ -34,3 +34,9 @@ export async function getRecipes() {
 }
 getRecipes() 
 // getRecipes(recList);
+const calories =recipe.caloriesPerServing;
+let badgesave="";
+let badgetext=`${calories}kcal`;
+if (calories<400){
+    badgesave=("")
+}
