@@ -1,0 +1,11 @@
+.recipe-card {
+  border: 1px solid $primary-color;
+  border-radius: $border-radius;
+  padding: $padding-card;
+  width: $card-width;
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $font-main;
+  text-align: center;
+  box-shadow: $card-shadow;
+}
