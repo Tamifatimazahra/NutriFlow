@@ -1,5 +1,9 @@
-import { getRecipes } from "./api.js";
- export async function displayRecipes(recipes) {
+// import { getRecipes } from "./api.js";
+
+
+ export function displayRecipes(recipes) {
+    console.log(recipes);
+    
     const app = document.getElementById('app');
 
     app.innerHTML = '';
@@ -11,11 +15,22 @@ import { getRecipes } from "./api.js";
          carte.innerHTML = `
          <img src="${recipe.image}" alt="${recipe.title}" class="recipe-image">
         <h2>${recipe.name}</h2>
-        <p>${recipe.description}</p>
-        <p>Temps de cuisson: ${recipe.cookingTime} min</p>
+        <p>Duree: ${recipe.cookTimeMinutes} min</p>
     `;
         app.appendChild(carte);
     };
 
 }
-getRecipes(displayRecipes);
+export async function getRecipes() {
+    try {
+        const data = await fetch('https://dummyjson.com/recipes');
+        const infos = await data.json();
+        console.log(infos);
+        displayRecipes(infos.recipes)
+        
+    } catch (error) {
+        console.error(error);
+    }
+}
+getRecipes() 
+// getRecipes(recList);
