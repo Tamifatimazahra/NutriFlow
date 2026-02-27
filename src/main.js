@@ -28,7 +28,7 @@
         <h2 class="recipe-card-name">${recipe.name}</h2>
        
         <p class="recipe-card-cookTimeMinutes">  🕛 ${recipe.cookTimeMinutes} min</p>
-        <span class="badge" style="background:${badgeColor}">
+        <span class="badge" style="color:${badgeColor}">
   ${recipe.caloriesPerServing} kcal
 </span>
 
