@@ -12,10 +12,25 @@
         const carte = document.createElement("div");
         carte.classList.add("recipe-card");
 
+
+        const calories=recipe.caloriesPerServing;
+        let badgeColor="";
+
+        if(calories<400){
+            badgeColor="green";
+        } else if (calories<=800){
+            badgeColor="orange";
+        }else{
+            badgeColor="red"
+        }
          carte.innerHTML = `
          <img class="recipe-card-img" src="${recipe.image}" alt="${recipe.title}" class="recipe-image">
-        <h2 class=".recipe-card-name">${recipe.name}</h2>
-        <p class=".recipe-card-cookTimeMinutes"> ⏱ ${recipe.cookTimeMinutes} min</p>
+        <h2 class="recipe-card-name">${recipe.name}</h2>
+        <p class="recipe-card-cookTimeMinutes"> ⏱ ${recipe.cookTimeMinutes} min</p>
+        <span class="badge" style="background:${badgeColor}">
+  ${recipe.caloriesPerServing} kcal
+</span>
+
     `;
         app.appendChild(carte);
     };
@@ -35,7 +50,7 @@ export async function getRecipes() {
 getRecipes() 
 // getRecipes(recList);
 const calories =recipe.caloriesPerServing;
-let badgesave="";
+let badgeColor="";
 let badgetext=`${calories}kcal`;
 if (calories<400){
     badgesave=("")

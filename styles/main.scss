@@ -2,3 +2,10 @@
 @import 'cards';
 @import 'modal';
 @import 'responsive';
+.bottom-nav{
+    width:$width-nav;
+    height:$height-nav;
+    background-color:$primary-color;
+    display: flex;
+    justify-content: space-between;
+}

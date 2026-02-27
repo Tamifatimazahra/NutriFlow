@@ -35,4 +35,12 @@
   text-align: left;
 }
 
+.bottom-nav {
+  width: 378px;
+  height: 50px;
+  background-color: #F5F5F5;
+  display: flex;
+  justify-content: space-between;
+}
+
 /*# sourceMappingURL=main.css.map */
