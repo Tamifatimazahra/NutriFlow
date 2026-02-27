@@ -26,7 +26,8 @@
          carte.innerHTML = `
          <img class="recipe-card-img" src="${recipe.image}" alt="${recipe.title}" class="recipe-image">
         <h2 class="recipe-card-name">${recipe.name}</h2>
-        <p class="recipe-card-cookTimeMinutes"> ⏱ ${recipe.cookTimeMinutes} min</p>
+       
+        <p class="recipe-card-cookTimeMinutes">  🕛 ${recipe.cookTimeMinutes} min</p>
         <span class="badge" style="background:${badgeColor}">
   ${recipe.caloriesPerServing} kcal
 </span>
@@ -49,9 +50,5 @@ export async function getRecipes() {
 }
 getRecipes() 
 // getRecipes(recList);
-const calories =recipe.caloriesPerServing;
-let badgeColor="";
-let badgetext=`${calories}kcal`;
-if (calories<400){
-    badgesave=("")
-}
+
+const search=document.getElementById('recherche')

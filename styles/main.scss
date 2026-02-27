@@ -2,10 +2,36 @@
 @import 'cards';
 @import 'modal';
 @import 'responsive';
-.bottom-nav{
-    width:$width-nav;
-    height:$height-nav;
-    background-color:$primary-color;
+// .bottom-nav{
+//     width:$width-nav;
+//     height:$height-nav;
+//     background-color:$primary-color;
+//     display: flex;
+//     justify-content: space-between;
+// }
+// #loader{
+//     display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh; 
+//   font-size: 1.5rem;
+//   color: #555;
+  
+  
+// }
+/* Centrage de la barre de recherche */
+.search-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#recherche {
+    width: auto;
+    min-width: 250px;
+    max-width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
 }
